@@ -1,0 +1,27 @@
+# OS
+.DS_Store
+.Trashes
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OMC runtime state
+.omc/state/
+.omc/logs/
+
+# Ephemeral Claude Code state (세션 한정 값)
+.claude/settings.json.backup
+.claude/statsig/
+
+# 민감 정보 가능성 — 수동 검토 후 커밋
+# (context/memory/는 기본 포함. wrap-up이 검토 후 커밋한다)
+
+# Node / Python artifacts (혹시 추가될 경우)
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
