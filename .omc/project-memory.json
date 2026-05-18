@@ -1,0 +1,74 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1779102719814,
+  "projectRoot": "/Users/user/My Workspace/AgenticOS",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "brand-context": {
+      "path": "brand-context",
+      "purpose": null,
+      "fileCount": 5,
+      "lastAccessed": 1779102719794,
+      "keyFiles": [
+        "assets.md",
+        "icp.md",
+        "positioning.md",
+        "samples.md",
+        "voice.md"
+      ]
+    },
+    "context": {
+      "path": "context",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1779102719799,
+      "keyFiles": [
+        "learnings.md",
+        "memory.md",
+        "soul.md",
+        "user.md"
+      ]
+    },
+    "output": {
+      "path": "output",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1779102719800,
+      "keyFiles": []
+    },
+    "skills": {
+      "path": "skills",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1779102719801,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}

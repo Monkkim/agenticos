@@ -9,7 +9,7 @@ Claude Code 기반 개인 브랜드/비즈니스 자동화 운영 체제.
 - **brand-context/** — 브랜드의 정체성 (voice / ICP / positioning / samples / assets)
 - **context/** — 에이전트의 기억 (정체성, 사용자 선호, 장·단기 메모리, 학습 로그)
 - **skills/** — 분류별 skill 모음 (foundation / execution / strategy / creative / ops)
-- **projects/** — skill이 만들어낸 산출물 저장소
+- **output/** — skill이 만들어낸 산출물 저장소 (`newsletter/` / `card-news/` / `research/` 등 카테고리별 하위 폴더)
 
 ## 빠른 시작
 

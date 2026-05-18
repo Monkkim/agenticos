@@ -10,6 +10,8 @@
 # OMC runtime state
 .omc/state/
 .omc/logs/
+.omc/sessions/
+output/**/.omc/
 
 # Ephemeral Claude Code state (세션 한정 값)
 .claude/settings.json.backup

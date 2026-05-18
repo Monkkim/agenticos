@@ -11,12 +11,14 @@
 brand-context/   # 브랜드 스냅샷 (voice, icp, positioning, samples, assets)
 context/         # 동적 기억 (soul, user, memory, learnings, memory/YYYY-MM-DD.md)
 skills/          # 카테고리별 skill (foundation / execution / strategy / ops)
-projects/        # skill 산출물 (YYYY-MM-DD-<topic>/)
+output/          # skill 산출물 (<카테고리>/YYYY-MM-DD-<topic>/) — newsletter, card-news, research, video-script ...
 ```
 
 - **foundation/** — brand-context 최초 구축용 (start-here, brand-voice-extraction, icp-builder, positioning-builder)
 - **ops/** — 시스템 자가 유지 (heartbeat, wrap-up, skill-creator)
-- **execution/** · **strategy/** · **creative/** — 실제 산출물을 만드는 skill (필요 시 1개씩 추가)
+- **execution/** — 산출물 생성 skill (script-to-newsletter, repurpose)
+- **strategy/** — 채널 분석·검증 skill (youtube-audit, script-scoring)
+- **creative/** — 추후 추가 예정
 
 ## 🔑 핵심 작동 원리 (YOU MUST)
 
@@ -24,7 +26,7 @@ projects/        # skill 산출물 (YYYY-MM-DD-<topic>/)
 2. **세션 시작 시** `skills/ops/heartbeat/SKILL.md`를 참조하여 시스템 정합성을 체크한다. `CLAUDE.md`가 로드된 순간 heartbeat 절차를 수행한다.
 3. **새 Skill을 만들기 전에** `skills/ops/skill-creator/SKILL.md`를 반드시 호출한다. 중복/의존성을 피하기 위함이다.
 4. **세션 종료 시** 사용자가 "close session" / "wrap up" / "세션 종료" 같은 의사를 밝히면 `skills/ops/wrap-up/SKILL.md`를 호출한다.
-5. **Skill 산출물은 `projects/YYYY-MM-DD-<topic>/`에 저장**한다. 날짜는 `date +%F`로.
+5. **Skill 산출물은 `output/<카테고리>/YYYY-MM-DD-<topic>/`에 저장**한다. 카테고리는 산출물 성격 (`newsletter` / `card-news` / `research` / `video-script` 등). 날짜는 `date +%F`로.
 
 ## 📁 주요 경로 (자주 참조)
 
@@ -58,6 +60,16 @@ projects/        # skill 산출물 (YYYY-MM-DD-<topic>/)
 
 # 새 skill 만들기 전
 # → skills/ops/skill-creator 먼저 호출
+
+# 유튜브 영상 1개 → 인스타·쓰레드·숏폼훅 (옵션: 뉴스레터)
+# → /repurpose <YOUTUBE_URL>              (인스타 / 쓰레드 / 숏폼훅 3종)
+# → /repurpose <YOUTUBE_URL> --newsletter (위 3종 + 뉴스레터 12블록)
+
+# 채널 데이터 감사 + 다음 5편 추천
+# → "채널 감사" 발화 → skills/strategy/youtube-audit
+
+# 촬영 전 스크립트 채점 (1~10점 + 7점 미만 리라이트)
+# → "스크립트 채점" 발화 → skills/strategy/script-scoring
 ```
 
 ## 📚 용어 정의
