@@ -27,6 +27,8 @@ output/          # skill 산출물 (<카테고리>/YYYY-MM-DD-<topic>/) — news
 3. **새 Skill을 만들기 전에** `skills/ops/skill-creator/SKILL.md`를 반드시 호출한다. 중복/의존성을 피하기 위함이다.
 4. **세션 종료 시** 사용자가 "close session" / "wrap up" / "세션 종료" 같은 의사를 밝히면 `skills/ops/wrap-up/SKILL.md`를 호출한다.
 5. **Skill 산출물은 `output/<카테고리>/YYYY-MM-DD-<topic>/`에 저장**한다. 카테고리는 산출물 성격 (`newsletter` / `card-news` / `research` / `video-script` 등). 날짜는 `date +%F`로.
+6. **대화 중 위키-worthy 지식이 나오면** `skills/ops/wiki-capture/SKILL.md`를 참조해 즉시 `/Users/user/Documents/Obsidian Vault/wiki/`에 저장한다. 저장 판단 기준은 SKILL.md에 명문화되어 있다.
+7. **사용자가 "정리해줘" / "컴파일해줘"라고 말하면** `skills/ops/wiki-capture/SKILL.md` 수동 트리거 절차를 따라 `raw/` 폴더와 미정리 파일을 wiki로 컴파일한다.
 
 ## 📁 주요 경로 (자주 참조)
 
@@ -35,6 +37,9 @@ output/          # skill 산출물 (<카테고리>/YYYY-MM-DD-<topic>/) — news
 - `context/learnings.md` — skill별 피드백 장기 기억 (wrap-up이 append)
 - `context/memory/YYYY-MM-DD.md` — 세션별 단기 기억 (heartbeat가 load)
 - `skills/foundation/_question-banks/<domain>.md` — start-here가 로드하는 도메인별 인터뷰 질문지
+- `Obsidian Vault` — `/Users/user/Documents/Obsidian Vault/` (wiki 저장 대상)
+  - `wiki/_master-index.md` — 전체 wiki 진입점
+  - `raw/` — 수동 정리 대상 소스 자료
 
 ## 🧪 자기 검증 규칙
 
@@ -70,6 +75,9 @@ output/          # skill 산출물 (<카테고리>/YYYY-MM-DD-<topic>/) — news
 
 # 촬영 전 스크립트 채점 (1~10점 + 7점 미만 리라이트)
 # → "스크립트 채점" 발화 → skills/strategy/script-scoring
+
+# 수동 wiki 정리 (raw/ 폴더 전체 컴파일)
+# → "정리해줘" 발화 → skills/ops/wiki-capture 수동 트리거
 ```
 
 ## 📚 용어 정의
