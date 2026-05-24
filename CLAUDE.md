@@ -27,9 +27,16 @@ output/          # skill 산출물 (<카테고리>/YYYY-MM-DD-<topic>/) — news
 3. **새 Skill을 만들기 전에** `skills/ops/skill-creator/SKILL.md`를 반드시 호출한다. 중복/의존성을 피하기 위함이다.
 4. **세션 종료 시** 사용자가 "close session" / "wrap up" / "세션 종료" 같은 의사를 밝히면 `skills/ops/wrap-up/SKILL.md`를 호출한다.
 5. **Skill 산출물은 `output/<카테고리>/YYYY-MM-DD-<topic>/`에 저장**한다. 카테고리는 산출물 성격 (`newsletter` / `card-news` / `research` / `video-script` 등). 날짜는 `date +%F`로.
-6. **대화 중 위키-worthy 지식이 나오면** `skills/ops/wiki-capture/SKILL.md`를 참조해 즉시 `/Users/user/Documents/Obsidian Vault/wiki/`에 저장한다. 저장 판단 기준은 SKILL.md에 명문화되어 있다.
+6. **대화 중 유의미한 지식·판단·산출물이 나오면** `skills/ops/wiki-capture/SKILL.md`를 참조해 즉시 `/Users/user/Documents/Obsidian Vault/wiki/`에 저장한다. "wiki-worthy"를 좁게 해석하지 말 것 — 사용자가 배운 것, 결정한 것, 만든 것은 모두 저장 대상이다.
 7. **사용자가 "정리해줘" / "컴파일해줘"라고 말하면** `skills/ops/wiki-capture/SKILL.md` 수동 트리거 절차를 따라 `raw/` 폴더와 미정리 파일을 wiki로 컴파일한다.
-8. **사용자가 질문하거나 작업을 요청하면**, 먼저 `/Users/user/Documents/Obsidian Vault/wiki/_master-index.md`를 Read해서 관련 토픽이 있는지 확인한다. 있으면 해당 토픽의 `_index.md`와 관련 파일을 Read해서 답변/작업에 반영한다. wiki에 없는 내용이면 그냥 진행한다.
+8. **[HARD] 사용자가 질문하거나 작업을 요청하면, 반드시 먼저** `/Users/user/Documents/Obsidian Vault/wiki/_master-index.md`를 Read해서 관련 토픽이 있는지 확인한다. 있으면 해당 토픽의 `_index.md`와 관련 파일을 Read해서 답변/작업에 반영한다. wiki에 없는 내용이면 그냥 진행한다. **이 단계를 건너뛰는 것은 금지한다.**
+9. **작업이 완료될 때마다** `context/memory/YYYY-MM-DD.md`(오늘 날짜)에 아래 형식으로 한 블록을 append한다. 세션 종료를 기다리지 않고 즉시 기록한다.
+   ```
+   ## HH:MM — <작업 제목>
+   - 한 일: <1~3줄>
+   - 결정/학습: <있으면>
+   - 산출물 경로: <있으면>
+   ```
 
 ## 📁 주요 경로 (자주 참조)
 
